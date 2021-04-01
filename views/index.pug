@@ -2,5 +2,15 @@ extends layout
 
 block content
   h1= title
-  p Welcom to Lab 9 Page #{title}
-  button(type="button",class="btn btn-primary") Click Here
+  p New Page #{title} welcome
+  button(type="button",class="btn btn-success") Press Me
+  
+  div(id='target') Display
+  br
+  
+  script.
+    var client_count = 0;
+    function update(){
+      client_count++
+      document.getElementById("target").innerHTML = `Value now ${client_count}`
+    }
